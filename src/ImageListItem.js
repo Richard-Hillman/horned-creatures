@@ -4,7 +4,7 @@ export default class ImageListItem extends Component {
     render() {
         return (
             <div className="somethingGood">
-                
+
                 <img className="profilePicture" src={this.props.scandalousDragonHorns} alt={this.props.alternativeDispostion} />
 
                 <div>Keyword={this.props.magicalKeys}</div>

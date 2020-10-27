@@ -1,5 +1,19 @@
-.profilePicture {
+.App {
+  background-image: url("robin.jpg");
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  height: 100px;
-  width: 100px;
+.somethingGood {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 290px;
+  border: black 2px solid;
+}
+
+.profilePicture {
+  height: 250px;
+  width: 250px;
 }

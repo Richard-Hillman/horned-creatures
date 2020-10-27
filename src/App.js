@@ -9,7 +9,9 @@ function App() {
 
       <Header />
 
+      <span className="hornyWizards">
       <ImageList />
+      </span>
 
       <Footer />
 
