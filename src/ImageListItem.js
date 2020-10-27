@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
-
+// PRESENTATIONAL SIDE 
 export default class ImageListItem extends Component {
     render() {
         return (
-            <div>
-                <input type="img"/>
-                    <label className="hornedimages">{this.props.url} </label>
+            <div className="somethingGood">
+                
+                <img className="profilePicture" src={this.props.scandalousDragonHorns} alt={this.props.alternativeDispostion} />
+
+                <div>Keyword={this.props.magicalKeys}</div>
+                
+                <div>Horns Of The Devil Creatures={this.props.hornsFromHell}</div>   
+
             </div>
         )
     }

@@ -2,17 +2,18 @@ import React, { Component } from 'react'
 import images from './Data.js'
 import ImageListItem from './ImageListItem'
 
+
 export default class ImageList extends Component {
     render() {
         return (
             <div>
                 {
-                    this.images.map((image, i) => {
+                    images.map((item, i) => {
                         return <ImageListItem
-                        name={image.title}
-                        description={image.description}
-                        keyword={image.keyword}
-                        horns={image.horns}
+                        scandalousDragonHorns={item.url}
+                        alternativeDisposition={item.description}
+                        magicalKeys={item.keyword}
+                        hornsFromHell={item.horns}
                         key={i}
                         />
                     })
