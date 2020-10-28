@@ -1,22 +1,29 @@
 import './App.css';
-import Header from './Header.js'
-import Footer from './Footer.js'
+import React from 'react'
+import Header from './Header.js';
+import Footer from './Footer.js';
 import ImageList from './ImageList';
+import Dropper from './Dropper.js';
+import images from './Data.js';
 
-function App() {
-  return (
-    <div className="App">
+export default class App extends React.Component {
+  render() {
+    console.log(images);
+    return (
+    
+      <div className="coldHands">
 
-      <Header />
+        <Header />
 
-      <span className="hornyWizards">
-      <ImageList />
-      </span>
+        <div className="boogerImages">
+        <Dropper imageBoogers={images} />
+        <ImageList className="imagery"/>
+        </div> 
+        
+        <Footer />
 
-      <Footer />
-
-    </div>
-  );
+      </div>
+    
+    );
+  }
 }
-
-export default App;
