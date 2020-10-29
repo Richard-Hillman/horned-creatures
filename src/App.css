@@ -6,15 +6,19 @@
   flex-wrap: wrap;
 }
 
-.imagery {
+.animal-map {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   border: black solid 3px;
+  background-image: url("./robin1.jpg");
+
+  background-repeat: no-repeat;
+  padding: 20px;
 }
 
 img {
-  height: 250px;
+  height: 200px;
   width: 250px;
 
 }

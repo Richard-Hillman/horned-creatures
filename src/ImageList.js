@@ -1,24 +1,38 @@
 import React, { Component } from 'react'
-import images from './Data.js'
 import ImageListItem from './ImageListItem'
 
 
-export default class ImageList extends Component {
-    render() {
-        return (
-            <div>
-                {
-                    images.map((item, i) => {
-                        return <ImageListItem
-                        scandalousDragonHorns={item.url}
-                        alternativeDisposition={item.description}
-                        magicalKeys={item.keyword}
-                        hornsFromHell={item.horns}
-                        key={i}
-                        />
-                    })
-                }
-            </div>
+export default class ImageList extends React.Component {
+            render() {
+                
+                const filteredAnimals = this.props.imageBoogers.filter((item) => {
+                 
+                    if(!this.state.filter) return true;
+        
+                    if(item.keyword === this.state.filter) return true;
+        
+                    return false
+                });
+                
+                return (
+                <>    
+                
+                    <div>
+                            {
+                            filteredAnimals.map((item, i) => {
+                                return <ImageListItem
+                                scandalousDragonHornImageSource={item.url}
+                                alternativeDisposition={item.description}
+                                magicalKeys={item.keyword}
+                                hornsFromHell={item.horns}
+                                key={i}
+                                />
+                            })
+                            }
+                    </div>
+            
+                </>
+            
         )
     }
 }
